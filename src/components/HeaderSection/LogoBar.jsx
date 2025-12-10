@@ -9,7 +9,7 @@ const LogoBar = () => {
                 <div className='w-fit'><img width="20" height="20" src="https://img.icons8.com/material-rounded/24/FFFFFF/marker.png" alt="marker"/></div>
                 <div className='w-50'>location selection menu</div>
             </div>
-            <img src="src\assets\jalasons logo.webp" alt="Jalalson Logo" className='h-12 sm:h-14 md:h-16 lg:h-18 xl:h-20 xl:w-130 lg:w-90 md:w-50 sm:w-30 object-contain m-4 transition-all duration-1000 ease-in-out'/>
+            <img src=Jalal-Sons-Website-clone/src/assets/jalasons logo.webp" alt="Jalalson Logo" className='h-12 sm:h-14 md:h-16 lg:h-18 xl:h-20 xl:w-130 lg:w-90 md:w-50 sm:w-30 object-contain m-4 transition-all duration-1000 ease-in-out'/>
             <div className='h-fit w-full sm:w-full md:w-80 lg:w-100 xl:w-100 items-center justify-evenly flex flex-row-reverse xl:flex-row lg:flex-row md:flex-row sm:flex-row-reverse gap-4 m-auto'>
                 <div className='h-fit w-1/2 sm:w-1/2 md:w-fit lg:w-fit xl:w-fit items-center justify-end  sm:justify-end flex flex-row gap-4 m-0'>
                     <div><img width="20" height="20" src="https://img.icons8.com/material-sharp/24/FFFFFF/search.png" alt="search"/></div>
