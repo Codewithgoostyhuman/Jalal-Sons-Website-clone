@@ -1,15 +1,14 @@
 import React from "react";
 import jalalsonLogo from "../../assets/jalasons-logo.webp";
 import { useState } from "react";
-
+import Account from "./Account";
 const LogoBar = () => {
   const [isLocationOpen, setIsLocationOpen] = useState(false);
   const [location, setLocation] = useState("Select Location");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-
+  const [isAccountMenuOpen,setIsAccountMenuOpen] = useState(false)
+  
   return (
     <>
       {/* Logo Bar Section */}
@@ -34,7 +33,9 @@ const LogoBar = () => {
                     className="absolute inset-0"
                     onClick={() => setIsSearchOpen(false)}
                   />
+                  
                   <div className="relative bg-white p-4 rounded-lg shadow-lg transform transition-all duration-500 scale-95 opacity-100 animate-scaleIn">
+                    
                     <input
                       type="text"
                       value={searchQuery}
@@ -84,6 +85,7 @@ const LogoBar = () => {
                   height="20"
                   src="https://img.icons8.com/material-rounded/24/FFFFFF/user-male-circle.png"
                   alt="user-male-circle"
+                   onClick={() => setIsAccountMenuOpen(!isAccountMenuOpen)}
                 />
               </div>
               <div>
@@ -104,6 +106,7 @@ const LogoBar = () => {
         </div>
       </div>
       {/* Location Menu */}
+      {isLocationOpen && (
       <div
         className={`fixed inset-0 bg-black/40 backdrop-blur-3xl shadow-2xl ${
           isLocationOpen ? `opacity-100 visible` : `opacity-0 invisible`
@@ -142,7 +145,13 @@ const LogoBar = () => {
             Close
           </button>
         </div>
-      </div>
+      </div>)
+      }
+      {/*Account/Login Menu*/}
+      {isAccountMenuOpen && (
+      <Account isOpen= {setIsAccountMenuOpen} />
+      )}
+      
     </>
   );
 };
