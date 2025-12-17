@@ -39,7 +39,7 @@ const  validateFields = ()=>{
                 <label htmlFor="email" className='p-2'>Email:</label><br />
                 <input type="email" value={emailId} onChange={(e)=>(setEmailId(e.target.value))} className='outline-none border-gray-300  border w-full rounded-lg bg-gray-100 h-auto p-2' placeholder='Enter Email'/><br />
                 <label htmlFor="email" className='p-2'>Password:</label><br />
-                <input type="password" value={password} className='outline-none border border-gray-300 bg-gray-100 w-full rounded-lg h-auto p-2' placeholder='Enter Password'/><br />
+                <input type="password" value={password} onChange={(e)=>(setPassword(e.target.value))} className='outline-none border border-gray-300 bg-gray-100 w-full rounded-lg h-auto p-2' placeholder='Enter Password'/><br />
               </div>)}
               {/*Sign up form */}
               {!signInMode && (
